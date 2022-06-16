@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Root xmlns="http://www.tobesoft.com/platform/dataset" ver="5000">
+  <Parameters>
+    <Parameter id="ErrorCode" type="int">0</Parameter>
+    <Parameter id="ErrorMsg" type="string">success</Parameter>
+  </Parameters>
+  <Dataset id="test">
+    <ColumnInfo>
+      <Column id="DOMAIN" type="string" size="255"/>
+      <Column id="MODEL" type="string" size="255"/>
+      <Column id="DESCRIPTION" type="string" size="255"/>
+      <Column id="DATASOURCE" type="string" size="255"/>
+    </ColumnInfo>
+    <Rows>
+      <Row>
+        <Col id="DOMAIN">Table Layout</Col>
+        <Col id="MODEL">Table Layout</Col>
+        <Col id="DESCRIPTION">Table Layout</Col>
+        <Col id="DATASOURCE">DB</Col>
+        <DatasetLayout>
+          <Dataset id="input">
+            <ColumnInfo>
+              <Column id="NAME" type="string" size="255"/>
+              <Column id="TYPE" type="string" size="255"/>
+              <Column id="SIZE" type="string" size="255"/>
+              <Column id="ALIAS" type="string" size="255"/>
+              <Column id="DESCRIPTION" type="string" size="255"/>
+              <Column id="DEFAULT" type="string" size="255"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="NAME">ds_input</Col>
+                <Col id="TYPE">DataSet</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+          <Dataset id="ds_input">
+            <ColumnInfo>
+              <Column id="col01" type="string" size="100"/>
+              <Column id="col02" type="string" size="100"/>
+              <Column id="col03" type="string" size="100"/>
+            </ColumnInfo>
+            <Rows/>
+          </Dataset>
+          <Dataset id="output">
+            <ColumnInfo>
+              <Column id="NAME" type="string" size="255"/>
+              <Column id="TYPE" type="string" size="255"/>
+              <Column id="SIZE" type="string" size="255"/>
+              <Column id="ALIAS" type="string" size="255"/>
+              <Column id="DESCRIPTION" type="string" size="255"/>
+              <Column id="DEFAULT" type="string" size="255"/>
+            </ColumnInfo>
+            <Rows>
+              <Row>
+                <Col id="NAME">TB_DEPT</Col>
+                <Col id="TYPE">DataSet</Col>
+              </Row>
+              <Row>
+                <Col id="NAME">TB_EMP</Col>
+                <Col id="TYPE">DataSet</Col>
+              </Row>
+              <Row>
+                <Col id="NAME">TB_POS</Col>
+                <Col id="TYPE">DataSet</Col>
+              </Row>
+            </Rows>
+          </Dataset>
+          <Dataset id="TB_DEPT">
+            <ColumnInfo>
+              <Column id="DEPT_CD" type="string" size="2"/>
+              <Column id="DEPT_NAME" type="string" size="50"/>
+            </ColumnInfo>
+            <Rows/>
+          </Dataset>
+          <Dataset id="TB_EMP">
+            <ColumnInfo>
+              <Column id="EMPL_ID" type="string" size="5"/>
+              <Column id="FULL_NAME" type="string" size="50"/>
+              <Column id="DEPT_CD" type="string" size="2"/>
+              <Column id="POS_CD" type="string" size="2"/>
+              <Column id="HIRE_DATE" type="string" size="8"/>
+              <Column id="GENDER" type="string" size="1"/>
+              <Column id="MARRIED" type="string" size="10"/>
+              <Column id="SALARY" type="int" size="0"/>
+              <Column id="MEMO" type="string" size="2147483647"/>
+            </ColumnInfo>
+            <Rows/>
+          </Dataset>
+          <Dataset id="TB_POS">
+            <ColumnInfo>
+              <Column id="POS_CD" type="string" size="2"/>
+              <Column id="POS_NAME" type="string" size="50"/>
+            </ColumnInfo>
+            <Rows/>
+          </Dataset>
+        </DatasetLayout>
+      </Row>
+    </Rows>
+  </Dataset>
+</Root>

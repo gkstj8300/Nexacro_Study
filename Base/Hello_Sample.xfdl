@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FDL version="2.1">
+  <Form id="Hello" width="800" height="600" titletext="New Form" scrolltype="none">
+    <Layouts>
+      <Layout height="600" mobileorientation="landscape" width="800">
+        <Static id="Static00" taborder="0" text="Desktop Screen" left="66" top="-133" width="240" height="30" font="normal bold 14px &quot;Arial&quot;" color="red"/>
+        <Button id="Button00_01" taborder="1" text="Hello World" left="465" top="147" width="250" height="73" onclick="Button00_onclick"/>
+        <Div id="Div00" taborder="2" text="Div00" left="32" top="91" width="418" height="309">
+          <Layouts>
+            <Layout>
+              <Button id="Button00_01" taborder="0" text="Hello World" left="153" top="228" width="250" height="73" onclick="Button00_onclick"/>
+              <Div id="Div00" taborder="1" text="Div00" left="28" top="16" width="256" height="148">
+                <Layouts>
+                  <Layout>
+                    <Div id="Div00" taborder="0" text="Div00" left="25" top="22" width="181" height="103">
+                      <Layouts>
+                        <Layout>
+                          <Div id="Div00" taborder="0" text="Div00" left="30" top="28" width="133" height="58">
+                            <Layouts>
+                              <Layout>
+                                <Button id="Button00_01" taborder="0" text="Hello World" left="20" top="7" width="90" height="43" onclick="Button00_onclick"/>
+                              </Layout>
+                              <Layout name="Layout0"/>
+                            </Layouts>
+                          </Div>
+                        </Layout>
+                        <Layout name="Layout0"/>
+                      </Layouts>
+                    </Div>
+                  </Layout>
+                  <Layout name="Layout0"/>
+                </Layouts>
+              </Div>
+            </Layout>
+            <Layout name="Layout0"/>
+          </Layouts>
+        </Div>
+        <Tab id="Tab00" taborder="3" tabindex="0" left="468" top="246" width="320" height="224">
+          <Tabpages>
+            <Tabpage id="Tabpage1" text="Tabpage1">
+              <Layouts>
+                <Layout>
+                  <Button id="Button00" taborder="0" text="Button00" left="24" top="10" width="117" height="86"/>
+                  <Button id="Button00_01" taborder="1" text="Hello World" left="61" top="108" width="250" height="73" onclick="Button00_onclick"/>
+                </Layout>
+                <Layout name="Layout0"/>
+              </Layouts>
+            </Tabpage>
+            <Tabpage id="Tabpage2" text="Tabpage2"/>
+          </Tabpages>
+        </Tab>
+      </Layout>
+      <Layout name="Layout0" screenid="Phone_screen" width="480" height="768" mobileorientation="portrait">
+        <Static id="Static00" text="Phone Screen" left="176" top="77" width="120" height="30"/>
+      </Layout>
+    </Layouts>
+    <Script type="xscript5.1"><![CDATA[/***********************************************************/
+/* 프 로 그 램 : C:\Nexacro\Nexacro_Study_1\Base\Hello_Sample.xfdl
+/* 작 성 일 자 : 2022/06/16
+/* 작  성   자 : 박 지 훈
+/* 설       명 : 
+/***********************************************************/
+
+include "Lib::Common.xjs"
+
+this.Button00_onclick = function(obj:nexacro.Button,e:nexacro.ClickEventInfo)
+{
+	this.alert("Hello World");
+	trace("log Hello World");
+	if(e.altkey)
+	{
+		this.alert("true");	
+	} else {
+		this.alert("false");	
+	}
+	
+	//this.Div00.form.Div00.form.Div00.form.Div00.form.Button00_01 == copyId
+};
+
+/********* 주요단축키 설명 ***********/
+/* 블럭이동 : Ctrl+]
+/* 블럭선택 : Ctrl+Shift+]
+/* 블럭주석 : Ctrl+/
+/* 주석해제 : Alt+/
+
+/* Options -> Environment->Script-> AutoComplete (Auto-insert-closing brace)
+/* Options -> Environment->Font and Color -> Source ->View Indent Guide
+/* Copy ID : Div 및 Tabpage의 Depth가 있는 컴포넌트 복사기능 
+/****************************************/
+
+
+
+
+]]></Script>
+  </Form>
+</FDL>
